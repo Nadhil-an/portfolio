@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8c63fbec02.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-- ---------Home--------- -->
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src=""  class="logo" alt="">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h3>Hello,I'm</h3>
+                <h1>Nadil</h1>
+                <br>
+                <h4>I'm passionate in Development and <br>
+                     Cybersecurity Enthusiastic</h4>
+                <div class="social-links">
+                    <ul>
+                        <a href="https://www.linkedin.com/in/nadhilan/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Nadhil-an"><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/_nadhil._/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </ul>
+                    <div class="cv-btn">
+                        <a href="NADIL.pdf" download>View Resume</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+<!-- --------about------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/nadil.JPG" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm <span>Nadhil</span>. I am passionate about web development and cybersecurity, always eager to expand my skills and knowledge in technology. With a strong interest in DevSecOps and automation, I am continuously learning and exploring new ways to enhance security in development.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    <p class="tab-links" onclick="opentab(event, 'projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab(event, 'achievements')">Achievements</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML, CSS, Bootstrap</li>
+                        <li><span>Cybersecurity</span><br>Burp Suite, OWASP ZAP</li>
+                        <li><span>Languages</span><br>C, C++, JavaScript, Python</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Lovely Professional University</span><br>BCA Hons (Cybersecurity) (2023-26)</li>
+                        <li><span>St.Joseph Pullarampara</span><br>Higher Secondary (2021-23)</li>
+                        <li><span>Infant Jesus Thiruvambady</span><br>High School (2020-21)</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>SolarCalc - Smart Solar Panel Installation Advisor</span><br>Developed a solar energy website using HTML, CSS, and JavaScript, including a calculator tool to help customers evaluate solar panel installation based on their monthly energy consumption. 
+                        <br>GitHub Repository: <a href="https://github.com/nadil-an/SolarCalc" target="_blank"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>Hall of Fame Recognitions for Security Findings :-</span></li>
+                        <ul>
+                            <li><strong>Caterpillar Vulnerability Disclosure Program:</strong> Recognized in the Hall of Fame for identifying a <em>"No valid SPF token"</em> vulnerability.</li>
+                            <li><strong>OYO Vulnerability Disclosure Program:</strong> Hall of Fame entry for reporting a <em>"No valid SPF token"</em> issue.</li>
+                            <li><strong>American Systems Vulnerability Disclosure Program:</strong> Listed in the Hall of Fame for discovering a <em>"No valid SPF token"</em> vulnerability.</li>
+                        </ul>
+                    </ul>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- -----------contact-------- -->
+    
+<div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>nadhil838@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+91 9400883082</p>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/nadhilan/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Nadhil-an"><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/_nadhil._/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- --------------- script --------------- -->
+
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+
+    function opentab(event, tabname) {
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    for (var tablink of tablinks) {
+        tablink.classList.remove('active-link');
+    }
+
+    for (var tabcontent of tabcontents) {
+        tabcontent.classList.remove('active-tab');
+    }
+
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabname).classList.add('active-tab');
+}
+
+</script>
+   
+</body>
+</html>
